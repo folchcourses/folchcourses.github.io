@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Installing Enthought Canopy</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Installing Enthought Canopy Python</h1>
+
+Enthought Canopy is a Python distribution that bundles the Python programming
+language and over 200 Python packages for scientific computing, some of which
+provide spatial analysis and/or GIS functionality.<p>
+
+
+     <h2>Get an Enthought Academic Account</h2>
+
+             <ol>
+             <li>Go to the <a href="https://www.enthought.com/products/epd/" target="_blank" >Enthought website</a></li>
+             <li>Click <tt>Create Account</tt> in the upper-right. <a href="images/enthought1.png" >example</a> </li>
+             <li>Fill in the form using your <tt>fsu.edu</tt> email account, which will facilitate getting an academic account later. </li>
+             <li>Once you have completed the form, Enthought will send an activation email.  Follow the directions in this email.</li>
+             <li>From the activation web page click the <tt>Request an academic license</tt> link at the bottom-left. <a href="images/enthought2.png" >example</a> </li>
+             <li>On the Academic web page, click the <tt>Request your Academic License</tt> button on the bottom-left. <a href="images/enthought3.png" >example</a> </li>
+
+             </ol>
+
+     <h2>Downloading Enthought Canopy</h2>
+
+
+     <ol>
+     <li>Login to the <a href="https://www.enthought.com/products/epd/" target="_blank" >Enthought website</a></li>
+     <li>Click the <tt>Downloads</tt> link on the left side. <a href="images/enthought4.png" >example</a></li>
+     <li>The website will detect your operating system, and offer four different downloads: <a href="images/enthought5.png" >example</a></li>
+     <ul>
+         <li>32-bit Canopy Express
+         <li>32-bit Canopy Full  &#8592; choose this if you're on Windows AND you want Canopy to access ArcGIS's python packages; if you have an older computer you might need this.
+         <li>64-bit Canopy Express
+         <li>64-bit Canopy Full  &#8592; Mac and Linux users should choose this, along with Windows users not wanting to link to ArcGIS.
+     </ul>
+     </ol>
+
+     Note: Some installations of ArcGIS use 64-bit architecture and/or 64-bit
+     Python code.  If you have this version of ArcGIS you probably know it,
+     and should install 64-bit Canopy Full. <p>
+
+
+     <h2>Installing Enthought Canopy</h2>
+
+     <ol>
+     <li>Double-click the file you downloaded and install it as you would any piece of software. Use all the defaults unless you're comfortable changing things.</li>
+     <li>The software is now "installed", but is not really usable yet.</li>
+     <li>Launch the Canopy application to begin the setup process. On a Mac you may need to go to the Applications folder and right-click the Canopy app and select <tt>Open</tt> (this is only required the first time).</li>
+     <li>Unless you have a good reason not to, use the default location for the environment directory. <a href="images/enthought6.png" >example</a></li>
+     <li>Unless you have a good reason not to, make Canopy your default Python. Click <tt>Start using Canopy</tt>. <a href="images/enthought7.png" >example</a></li>
+     <li>Log in to your Enthought account in the Canopy application. <a href="images/enthought8.png" >example</a></li>
+     <li>Click the <tt>Package Manager</tt> button. <a href="images/enthought9.png" >example</a></li>
+     <li>Click <tt>Updates</tt> in the left pane. <a href="images/enthought10.png" >example</a>
+     <li>Click the <tt>Install all Updates</tt> button in the lower-right. <a href="images/enthought11.png" >example</a></li>
+     </ol>
+
+      Congratulations, you now have a state of the art Python environment on your machine! <p>
+
+
+     <h2>Playing nice with ArcGIS (optional; not needed for the course)</h2>
+
+    When you install ArcGIS, you also get a version of Python, a limited set
+    of open source packages and ESRI's packages (e.g., <tt>arcpy</tt>).  What
+    you have done so far will not impact ArcGIS or the Python that comes with
+    ArcGIS (at least as far as I've tested).  The following steps allow you to
+    access ArcGIS's python packages AND Canopy's large set of open source
+    packages in the same Python environment.  You can link Enthought Canopy
+    and ArcGIS if:
+     <ul>
+         <li>You're on a Windows machine</li>
+         <li>You installed 32-bit Enthought Canopy (in most cases)</li>
+         <li>You have ArcGIS installed on your machine</li>
+      </ul>
+
+      
+     <ol>
+         <li>Figure out the path to the ArcGIS installation on your machine. It's probably on <tt>C:\</tt> or some directory of programs on <tt>C:\</tt>. We will call this <tt>C:\path\to\ArcGIS\</tt>.
+         <li>Figure out the path to the Enthought installation on your
+         machine. It's probably in your user space on <tt>C:\</tt>.
+         We will call this
+         <tt>C:\Users\your_name\AppData\Local\Enthought\</tt>.
+         <li>Open a text editor (e.g., Notepad or <a
+         href="http://notepad-plus-plus.org/" >Notepad++</a>), and enter the
+     following lines (you will replace <tt>\path\to\</tt> with the path on
+     your machine):</li>
+     <tt># .pth file for arcpy <br>
+     C:\path\to\ArcGIS\Desktop10.1\bin <br>
+     C:\path\to\ArcGIS\Desktop10.1\arcpy <br>
+     C:\path\to\ArcGIS\Desktop10.1\ArcToolbox\Scripts </tt> <br>
+     <li>Save the content of the text editor as <tt>zzArcGIS.pth</tt>.</li>
+     <li>Move <tt>zzArcGIS.pth</tt> to
+     <tt>C:\Users\your_name\AppData\Local\Enthought\Canopy32\User\lib\site-packages</tt>.
+    </ol>
+
+    You should now be able to import <tt>arcpy</tt> into you Canopy Python
+    environment.  If you want more details on this process or want to import
+    Canopy packages when you're in ArcGIS Python, <a
+    href="http://gis.stackexchange.com/questions/59012/how-to-access-esri-arcpy-modules-from-enthought-canopy" >click here</a>.
+<p>
+<p>
+
+    
+
+
+
+
+    
+
+
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
