@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Github Workflow</title>
+    <title>Github Viewing</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -16,6 +16,7 @@
     <div class="wrapper">
         <h1>Viewing a Course Repository</h1>
 
+<img src="figures/octojedi.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">        
     The course repository is located in a private organizational account in
     the GitHub cloud.  This means that it can only be viewed by invited GitHub
     users, i.e., students in the class. During the initial weeks of the course
@@ -28,9 +29,9 @@
      By now you should have done these things:<p>
              <ol>
              <li>Signed up for an account on Github </li>
-             <li>Requested and received educational status with Github </li>
              <li>Sent me your Github user name </li>
              <li>Accepted my invitation to join the <tt>folchcourses</tt> Github organization </li>
+             <li>Installed SourceTree on your personal machine</li>
              </ol>
              If you have not done all of these, <a href="new_account.html" target="_blank" >follow the steps here</a>.
         <p>
@@ -44,33 +45,38 @@
     
      <ol>
      <li>Login to Github</li>
-     <li>Click your user name in the upper-right corner. <a href="images/wf_step2.png" >example</a></li>
-     <li>Click the <tt>folchcourses</tt> icon in the lower-left corner. <a href="images/wf_step3.png" >example</a></li>
+     <li>Click your user icon in the upper-right corner. <a href="images/wf_step2.png" >example</a></li>
+     <li>Update your profile. <a href="images/wf_step3a.png" >example</a></li>
+     <li>Click the <tt>folchcourses</tt> icon in the lower-left corner. <a href="images/wf_step3b.png" >example</a></li>
      <li>Click the repository with your course name, semester and year. <a href="images/view_1.png" >example</a></li>
-     <li>Here you will find the syllabus, homework exercises and other course content. <a href="images/view_2.png" >example</a></li>
+     <li>Here you will find the syllabus, exercises and other course content. <a href="images/view_2.png" >example</a></li>
      </ol>
 
 
      <h2>Cloning the course repository to your local hard drive</h2>
 
 
-     Cloning allows you to pull course content to your lab or personal
-     computer. GitHub provides software to facilitate this process.
+     Cloning allows you to pull course content from the cloud (hosted at
+     github.com) to your personal computer.  The cloning process will create a
+     special directory on your computer that synchronizes the files in the
+     cloud and the files on your computer.  Unlike <a
+     href="http://dropbox.com">Dropbox</a>, you explicitly control when a
+ synchronization happens using SourceTree.  Follow these steps to get this
+ setup on your computer.  Note: you only need do this the first time you
+ connect to a remote repository.<br><br>
 
-     <ul>
-         <li><a href="https://mac.github.com/" >Mac</a></li>
-         <li><a href="https://windows.github.com/" >Windows</a></li>
-     </ul>
-
-     Follow these steps to get started with the GUI (only the first time you use it).
      <ol>
-         <li>Download the appropriate software for your computer, and install it.</li>
-         <li>Startup the GUI, and follow the steps to link your GitHub account to the GUI.</li>
-         <li>"Clone" the course repository to your local hard drive.</li>
+         <li>Open SourceTree.</li>
+         <li>Follow the steps to link your GitHub account.</li>
+         <li>Click "Skip Setup".</li>
+         <li>Click "Remote", then "Clone" the course repository to your local
+             hard drive. Do NOT clone folchcourses/folchcourses.github.io.</li>
+         <li>You can put the repository anywhere on your hard drive.</li>
+         <li>Click "Local" and choose the repository to view it in SourceTree. You will
+             also be able to see the files on your hard drive using Finder
+             (Mac) or Windows Explorer (Windows).</li>
      </ol>
 
-     You can now pull (called "sync" in the software) course content and view
-     it on your local machine.
 
      
 
