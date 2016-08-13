@@ -23,12 +23,15 @@ provide spatial analysis and/or GIS functionality.<p>
 
    <ol>
      <li>Go to the Continuum website and <a href="https://www.continuum.io/downloads" target="_blank" >download the 64-bit version of Python 2.7</a> for your operating system.</li> 
-     <li>Install the downloaded file as you would any piece of software. Use all the defaults unless you're comfortable changing things.</li>
+     <li>Install the downloaded file as you would any piece of software.
+     <ul>
+       <li>Use all the defaults, EXCEPT make Anaconda your default python</li>
+     </ul>
      <li>Finish the install from the command line</li>
      <ul>
        <li>On Mac open the Terminal application (Applications > Utilities > Terminal) on Windows open the Command Prompt application</li>
        <li>Install Anaconda Navigator. Type (or copy-and-paste) the following and hit Enter: <tt>conda install anaconda-navigator</tt></li>
-       <li>Upadte all the Python packages. Type: <tt>conda update --all</tt> </li>
+       <li>Upadte all the Python packages. Type (or copy-and-paste) the following and hit Enter: <tt>conda update --all</tt> </li>
      </ul>
      <li>The Navigator application can be found on Mac in Utilties > Navigator; on Windows it should be on your Desktop</li>
      </ol>
@@ -49,46 +52,11 @@ provide spatial analysis and/or GIS functionality.<p>
 <img src="figures/arcpy_icon.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">          
     When you install ArcGIS, you also get a version of Python, a limited set
     of open source packages and ESRI's python packages, called <tt>arcpy</tt>.
-    This is a very basic setup. Rumor is that Anaconda Python will be cooked into
-    ArcGIS 10.5, but until that time we want a better option than what ESRI 
-    supplies. The following steps allow you to
-    access ArcGIS's python packages AND Anaconda's large set of open source
-    packages in the same Python environment.  <BR><BR>
-    
-    <u>32-bit vs. 64-bit</u>: Your versions of Canopy and ArcGIS
-    must match. If the setup below doesn't work it is probably due to
-    mismatched architecture. In general, 64-bit is preferred to 32-bit since it
-    can hold much more data in memory, but the python scripts inside your
-    version of ArcGIS may not be 64-bit. <br><br>
-
-     <ol>
-         <li>Figure out the path to the ArcGIS installation on your machine. It's probably on <tt>C:\</tt> or some directory of programs on <tt>C:\</tt>. We will call this <tt>C:\path\to\ArcGIS\</tt>.
-         <li>Figure out the path to the Enthought installation on your
-         machine. It's probably in your user space on <tt>C:\</tt>.
-         We will call this
-         <tt>C:\Users\your_name\AppData\Local\Enthought\</tt>.  If you do not
-         see the <tt>AppData</tt> directory on your machine, then it is
-         probably hidden; 
-        <a href="http://blogs.msdn.com/b/zxue/archive/2012/03/08/win8-howto-19-show-hidden-files-folders-and-drives.aspx"
-        >follow this link to unhide it</a>.
-         <li>Open a text editor (e.g., Notepad or <a
-         href="http://notepad-plus-plus.org/" >Notepad++</a>), and enter the
-     following lines (you will replace <tt>\path\to\</tt> with the path on
-     your machine):</li>
-     <tt># .pth file for arcpy <br>
-     C:\path\to\ArcGIS\Desktop10.1\bin <br>
-     C:\path\to\ArcGIS\Desktop10.1\arcpy <br>
-     C:\path\to\ArcGIS\Desktop10.1\ArcToolbox\Scripts </tt> <br>
-     <li>Save the content of the text editor as <tt>zzArcGIS.pth</tt>.</li>
-     <li>Move <tt>zzArcGIS.pth</tt> to
-     <tt>C:\Users\your_name\AppData\Local\Enthought\Canopy32\User\lib\site-packages</tt>.
-    </ol>
-
-    You should now be able to import <tt>arcpy</tt> into you Canopy Python
-    environment.  If you want more details on this process or want to import
-    Canopy packages when you're in ArcGIS Python, <a
-    href="http://gis.stackexchange.com/questions/59012/how-to-access-esri-arcpy-modules-from-enthought-canopy" >click here</a>.
-<p>
+    This is a very basic setup. Anaconda Python will be 
+    <a href="https://devsummit.schedule.esri.com/#schedule/56b287364be5dd46a3000235/56b287364be5dd46a3000236">cooked into
+    ArcGIS at some point</a>, but until that time we want a better option than what ESRI 
+    supplies. I will work with students interested in getting ArcGIS's python packages AND Anaconda's large set of open source
+    packages in the same Python environment.  
 <p>
 
     
