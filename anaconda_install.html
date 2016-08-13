@@ -14,50 +14,45 @@
   </head>
   <body>
     <div class="wrapper">
-        <h1>Installing Enthought Canopy Python</h1>
+        <h1>Installing Continuum's Anaconda Python</h1>
 
-<img src="figures/canopy.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">          
-Enthought Canopy is a Python distribution that bundles the Python programming
-language and over 300 Python packages for scientific computing, some of which
+<img src="figures/anaconda.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">          
+Anaconda is a Python distribution that bundles the Python programming
+language and over 720 Python packages for scientific computing, some of which
 provide spatial analysis and/or GIS functionality.<p>
 
-             <ol>
-             <li>Request an academic account on the <a href="https://store.enthought.com/licenses/academic/" target="_blank" >Enthought website</a>.</li>
-            <li>Once you have an academic account, login to the Enthought website and <a href="https://store.enthought.com/downloads" target="_blank" >download the 64-bit version</a> of Canopy.</li> 
-            <li>Installing Enthought Canopy</li>
-     <ul>
+   <ol>
+     <li>Go to the Continuum website and <a href="https://www.continuum.io/downloads" target="_blank" >download the 64-bit version of Python 2.7</a> for your operating system.</li> 
      <li>Install the downloaded file as you would any piece of software. Use all the defaults unless you're comfortable changing things.</li>
-     <li>The software is now "installed", but is not really usable yet.</li>
-     <li>Launch the Canopy application to begin the setup process. On a Mac you may need to go to the Applications folder and right-click the Canopy app and select <tt>Open</tt> (this is only required the first time).</li>
-     <li>I recommend using all the defaults, including making Canopy your default Python. Note that this version of Python does not conflict with the Python installed by ESRI.</li>
-     <li>Log in to your Enthought account in the Canopy application. <a href="images/enthought8.png" >example</a></li>
-     <li>Click the <tt>Package Manager</tt> button. <a href="images/enthought9.png" >example</a></li>
-     <li>Click <tt>Updates</tt> in the left pane. <a href="images/enthought10.png" >example</a>
-     <li>Click the <tt>Install all Updates</tt> button in the lower-right. <a href="images/enthought11.png" >example</a></li>
+     <li>Finish the install from the command line</li>
+     <ul>
+       <li>On Mac open the Terminal application (Applications > Utilities > Terminal) on Windows open the Command Prompt application</li>
+       <li>Install Anaconda Navigator. Type (or copy-and-paste) the following and hit Enter: <tt>conda install anaconda-navigator</tt></li>
+       <li>Upadte all the Python packages. Type: <tt>conda update --all</tt> </li>
      </ul>
+     <li>The Navigator application can be found on Mac in Utilties > Navigator; on Windows it should be on your Desktop</li>
      </ol>
 
 
 
-     <h3>(RECOMMENDED) Install a Good Text Editor</h3>
+     <h3>Install a Good Text Editor</h3>
 
-     A good text editor will make coding easier and more fun.
+     A good text editor will make coding easier and more fun. The following are solid options, but others exist.
 
      <ul>
      <li>Mac: <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a></li>
      <li>Windows: <a href="https://notepad-plus-plus.org/">Notepad++</a></li>
      </ul>
 
-
-
      <h3>(OPTIONAL) Using ArcGIS with Canopy Python</h3>
 
 <img src="figures/arcpy_icon.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">          
     When you install ArcGIS, you also get a version of Python, a limited set
-    of open source packages and ESRI's packages (e.g., <tt>arcpy</tt>).  What
-    you have done so far will not impact ArcGIS or the Python that comes with
-    ArcGIS (at least as far as I've tested).  The following steps allow you to
-    access ArcGIS's python packages AND Canopy's large set of open source
+    of open source packages and ESRI's python packages, called <tt>arcpy</tt>.
+    This is a very basic setup. Rumor is that Anaconda Python will be cooked into
+    ArcGIS 10.5, but until that time we want a better option than what ESRI 
+    supplies. The following steps allow you to
+    access ArcGIS's python packages AND Anaconda's large set of open source
     packages in the same Python environment.  <BR><BR>
     
     <u>32-bit vs. 64-bit</u>: Your versions of Canopy and ArcGIS
