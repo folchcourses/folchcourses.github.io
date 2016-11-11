@@ -22,7 +22,11 @@ language and over 720 Python packages for scientific computing, some of which
 provide spatial analysis and/or GIS functionality.<p>
 
    <ol>
-     <li>Go to the Continuum website and <a href="https://www.continuum.io/downloads" target="_blank" >download the 64-bit version of Python 2.7</a> for your operating system.</li> 
+     <li>Go to the Continuum website and <a
+             href="https://www.continuum.io/downloads" target="_blank"
+             >download the 64-bit version of Python 2.7</a> for your operating
+         system. See below if you want to use ESRI's <tt>arcpy</tt> package on
+     a Windows machine.</li> 
      <li>Install the downloaded file as you would any piece of software.
      <ul>
        <li>Use all the defaults, EXCEPT make Anaconda your default python</li>
@@ -50,12 +54,35 @@ provide spatial analysis and/or GIS functionality.<p>
 
 <img src="figures/arcpy_icon.png" style="float: right; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">          
     When you install ArcGIS, you also get a version of Python, a limited set
-    of open source packages and ESRI's python packages, called <tt>arcpy</tt>.
+    of open source packages and ESRI's python tools, called <tt>arcpy</tt>.
     This is a very basic setup. Anaconda Python will be 
     <a href="https://devsummit.schedule.esri.com/#schedule/56b287364be5dd46a3000235/56b287364be5dd46a3000236">cooked into
-    ArcGIS at some point</a>, but until that time we want a better option than what ESRI 
-    supplies. I will work with students interested in getting ArcGIS's python packages AND Anaconda's large set of open source
-    packages in the same Python environment.  
+        ArcGIS at some point</a>, but until that time you can use
+    <tt>arcpy</tt> outside the ESRI environment.
+    
+    Regular ArcGIS installed on most machines requires 32 bit python (current
+    as of ArcGIS 10.4), and we will follow that assumption in what follows.
+    There are some flavors of ESRI products <a href="
+    http://desktop.arcgis.com/en/arcmap/latest/analyze/executing-tools/64bit-background.htm">compatible
+    with 64 bit python</a> (also <a href="https://blogs.esri.com/esri/supportcenter/2013/07/29/64-bit-vs-32-bit-python-explained/">see this</a>).
+
+    <ul>
+        <li>Follow the Anaconda steps above, except download and install
+            32-bit version of Python 2.7 (or 64 bit if you have a special
+            version of Arc).</li>
+        <li>Copy <tt>Desktop10.4.pth</tt> which can be found in <tt>C:\Python27\ArcGIS10.4\Lib\site-packages\</tt> to
+            the <tt>C:\your_user_name\Anaconda2\Lib\site-packages</tt>
+            directory.
+        <li>Note: The first time <tt>import arcpy</tt> is called, it will be slow.</li>
+        <li>The above steps are sufficient to use arcpy outside of ArcGIS.  <a
+                href="https://gisday.wordpress.com/2016/07/18/setting-up-anaconda-pysal-with-arcgis-python-environment/">This
+                website</a> has a far more detailed approach that uses
+            Anaconda environments. They also offer an approach to access all
+            the Anaconda packages from within ArcGIS, but I was not successful
+        in doing this.</li>
+    </ul>
+
+
 <p>
 
     
