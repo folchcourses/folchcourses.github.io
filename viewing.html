@@ -31,7 +31,7 @@
              <li>Signed up for an account on Github </li>
              <li>Sent me your Github user name </li>
              <li>Accepted my invitation to join the <tt>folchcourses</tt> Github organization </li>
-             <li>Installed SourceTree on your personal machine</li>
+             <li>Installed Git for Windows (Windows) or GitHub Desktop (Mac) on your personal machine</li>
              </ol>
              If you have not done all of these, <a href="new_account.html" target="_blank" >follow the steps here</a>.
         <p>
@@ -61,44 +61,36 @@
      special directory on your computer that synchronizes the files in the
      cloud and the files on your computer.  Unlike <a
      href="http://dropbox.com">Dropbox</a>, you explicitly control when a
- synchronization happens using SourceTree.  Follow these steps to get this
+ synchronization happens using the Git software.  Follow these steps to get this
  setup on your computer.  Note: you only need do this the first time you
  connect to a remote repository.<br><br>
 
      <ol>
-         <li>Open SourceTree.</li>
-         <li>If this is the first time you launched the software, then follow 
-             the steps to link to your GitHub account. Then click "Skip Setup" when
-             you are asked to clone a repo.</li>
+         <li>Create a new directory on your hard drive where you want to keep the course materials from GitHub.
+         <li>Open Terminal (Mac) or Anaconda Prompt (Windows).</li>
+         <li>Use the <tt>cd</tt> command to navigate to the new directory you
+             just created. For example, if you have a directory called
+             <tt>python_class</tt> in your <tt>Documents</tt> directory then
+             type:
+             <ul>
+                 <li><tt>cd Documents</tt>
+                 <li><tt>cd python_class</tt>
+             </ul>
          <li>Get course repository</li>
          <ul>
-         <li>Mac</li>
-         <ol>
-         <li>Click "Remote", then "Clone" the course repository to your local
-             hard drive. Do NOT clone folchcourses/folchcourses.github.io.</li>
-         <li>You can put the repository anywhere on your hard drive.</li>
-         <li>Click "Local" and choose the repository to view it in SourceTree. You will
-             also be able to see the files on your hard drive using Finder.</li>
-         </ol>
-         <li>Windows</li>
-         <ol>
-             <li>In the lower-left, click the button with the blue disks and
-                 gear icon.</li>
-             <li>Double-click the course repository in the list.  Do NOT clone 
-                 folchcourses/folchcourses.github.io.</li>
-             <li>You can put the repository anywhere on your hard drive.</li>
-             <li>Once the repository is cloned you can view it in SourceTree. You will
-                 also be able to see the files on your hard drive using Windows
-                 Explorer.</li>
-         </ol>
+            <li>Go to the course webpage on GitHub > Click the "Clone or
+                download" link (green button in the upper-right) > Highlight
+                the entire URL it shows and copy it.
+            <li>Go to the command line. Type  <tt>git clone</tt> and then 
+                paste the URL you just copied. It should look something like this:<br>
+                <tt>git clone
+                    https://github.com/folchcourses/geo5934_fall2015.git</tt> <br>
+                If it looks good, hit enter.
+            <li>Enter your GitHub user name and password if asked.
+            <li>If all went well, you can view the current course files on your
+                hard drive in Finder (Mac) or File Explorer (Windows).
          </ul>
      </ol>
-     
-      You will also need to register the software (which is free).</li>
-            <ul>
-                <li>Mac: Open the software and click "SourceTree" > "Registration" </li>
-                <li>Windows: Open the software and click "File" > "Registration" </li>
-            </ul>
      
 
 
